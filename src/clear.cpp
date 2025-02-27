@@ -6,4 +6,7 @@ namespace terminate {
 		std::cout << ascii::clear_screen;
 		return;
 	}
+	void clear_lines() {
+		std::cout << ascii::clear_line;
+	}
 }

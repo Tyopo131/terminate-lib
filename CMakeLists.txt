@@ -7,7 +7,7 @@ set(CMAKE_CXX_STANDARD_REQUIRED ON)
 project(terminate LANGUAGES CXX)
 
 set(SRC
-    "src/clrscreen.cpp"
+    "src/clear.cpp"
 )
 
 if (COMPILE_AS_SHARED_LIBRARY) 
