@@ -2,6 +2,6 @@
 
 #include <iostream>
 namespace terminatelib {
-	inline void clear_screen();
-	inline void clear_lines();
+	void clear_screen();
+	void clear_lines();
 }
