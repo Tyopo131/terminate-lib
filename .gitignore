@@ -10,3 +10,4 @@ terminate.sln
 CMakeFiles
 .vs
 out
+/build
