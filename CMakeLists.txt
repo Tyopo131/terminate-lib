@@ -4,10 +4,10 @@ option(COMPILE_AS_SHARED_LIBRARY "Compile as a shared library (.dll, .so, .dylib
 set(CMAKE_CXX_STANDARD 20)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
-project(terminate)
+project(terminate LANGUAGES CXX)
 
 set(SRC
-    "src/main.cpp"
+    "src/clrscreen.cpp"
 )
 
 if (COMPILE_AS_SHARED_LIBRARY) 
@@ -17,5 +17,7 @@ if (COMPILE_AS_SHARED_LIBRARY)
 
 else() 
     add_library(terminate STATIC ${SRC})
-    message(STATUS "Will compile as a shared library. (.lib, .a)")
+    message(STATUS "Will compile as a static library. (.lib, .a)")
 endif()
+target_include_directories(terminate PRIVATE "include/terminate/")
+include_directories(PRIVATE "include")
