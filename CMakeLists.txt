@@ -23,3 +23,4 @@ target_include_directories(terminate PRIVATE "include/terminate/")
 include_directories(PRIVATE "include")
 
 add_executable(ExampleProject example/example.cpp)
+target_link_libraries(ExampleProject PUBLIC terminate)
