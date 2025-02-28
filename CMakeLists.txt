@@ -8,6 +8,9 @@ project(terminate LANGUAGES CXX)
 
 set(SRC
     "src/clear.cpp"
+    "include/terminate/asciicodes.h"
+    "include/terminate/libinfo.h"
+    "include/terminate/clear.h"
 )
 
 if (COMPILE_AS_SHARED_LIBRARY) 

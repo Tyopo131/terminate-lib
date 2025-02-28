@@ -1,6 +1,9 @@
 #include <iostream>
 #include <asciicodes.h>
 #include <clear.h>
+#include <vector>
+#include <string>
+
 void terminatelib::clear_screen() {
 	std::cout << ascii::clear_screen;
 	return;
