@@ -11,7 +11,8 @@ set(SRC
     "include/terminate/asciicodes.h"
     "include/terminate/libinfo.h"
     "include/terminate/clear.h"
-)
+    "include/terminate/cursor.h"
+ "src/cursor.cpp")
 
 if (COMPILE_AS_SHARED_LIBRARY) 
     add_library(terminate SHARED ${SRC})
