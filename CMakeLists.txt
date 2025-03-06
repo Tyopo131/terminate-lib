@@ -12,7 +12,10 @@ set(SRC
     "include/terminate/libinfo.h"
     "include/terminate/clear.h"
     "include/terminate/cursor.h"
- "src/cursor.cpp")
+    "src/cursor.cpp"
+    "include/terminate/terminalpos.h"
+    "src/terminalpos.cpp"
+)
 
 if (COMPILE_AS_SHARED_LIBRARY) 
     add_library(terminate SHARED ${SRC})
