@@ -4,7 +4,7 @@ on:
     pull_request:
 
 jobs:
-    build-on-linux:
+    build:
         runs-on: ubuntu-latest
         steps:
             - name: Install Dependencies
@@ -19,6 +19,15 @@ jobs:
             - name: Build Project
               run: |
                 cmake --build out
+            - name: Upload artifacts
+              uses: actions/upload-artifact@v4
+              with:
+                name: Terminate binaries (Linux, Static lib)
+                path: |
+                  out/*.a
+                  out/*.dll
+                  out/*.so
+                  out/*.lib
     build-on-windows:
         runs-on: windows-latest
         steps:
@@ -33,7 +42,16 @@ jobs:
             - name: Build project
               run: |
                 cmake --build out
-    build-on-linux-dynamiclib:
+            - name: Upload artifacts
+              uses: actions/upload-artifact@v4
+              with:
+                name: Terminate binaries (Windows, Static lib)
+                path: |
+                  out/*.a
+                  out/*.dll
+                  out/*.so
+                  out/*.lib
+    build-dynamiclib:
         runs-on: ubuntu-latest
         steps:
             - name: Install Dependencies
@@ -48,6 +66,15 @@ jobs:
             - name: Build Project
               run: |
                 cmake --build out
+            - name: Upload artifacts
+              uses: actions/upload-artifact@v4
+              with:
+                name: Terminate binaries (Linux, Dynamic lib)
+                path: |
+                  out/*.a
+                  out/*.dll
+                  out/*.so
+                  out/*.lib
     build-on-windows-dynamiclib:
         runs-on: windows-latest
         steps:
@@ -62,3 +89,12 @@ jobs:
             - name: Build project
               run: |
                 cmake --build out
+            - name: Upload artifacts
+              uses: actions/upload-artifact@v4
+              with:
+                name: Terminate binaries (Windows, Dynamic lib)
+                path: |
+                  out/*.a
+                  out/*.dll
+                  out/*.so
+                  out/*.lib
