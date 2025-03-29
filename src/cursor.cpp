@@ -15,7 +15,7 @@ void terminatelib::move_cursor(std::optional<int> line, std::optional<int> col)
 	else if (!line.has_value() && col.has_value()) std::cout << "\033[" << col.value() << 'G';
 }
 
-void terminatelib::move_cursor(TerminalPos pos)
+void terminatelib::move_cursor(Pos pos)
 {
 	std::optional<int> line = pos.line;
 	std::optional<int> col = pos.col;
