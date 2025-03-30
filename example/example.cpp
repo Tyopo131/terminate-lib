@@ -44,6 +44,6 @@ int main() {
 		std::this_thread::sleep_for(sleepTimePerProgressBarTick);
 	}
 	terminatelib::clear_lines();
-	terminatelib::move_cursor(1, 1);
+	terminatelib::move_cursor({1,1});
 	std::cout << "Done!";
 }
