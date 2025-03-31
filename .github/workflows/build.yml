@@ -98,3 +98,15 @@ jobs:
                   out/*.dll
                   out/*.so
                   out/*.lib
+    publish-headers:
+        runs-on: ubuntu-latest
+        steps: 
+            - name: Checkout repository
+              uses: actions/checkout@v4
+            - name: Upload artifacts
+              uses: actions/upload-artifact@v4
+              with: 
+                name: Terminate includes (Cross-platform, Dynamic lib OR Static lib)
+                path: |
+                  include/terminate/*
+              
