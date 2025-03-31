@@ -109,4 +109,38 @@ jobs:
                 name: Terminate includes (Cross-platform, Dynamic lib OR Static lib)
                 path: |
                   include/terminate/*
-              
+    package-runtime-files-as-deb:
+        runs-on: ubuntu-latest
+        needs: build-dynamiclib
+        steps:
+            - name: Checkout Repository
+              uses: actions/checkout@v4
+              with:
+                path: repo
+            - name: Create directories
+              run: |
+                mkdir -p temp/DEBIAN temp/usr/lib/x86_64-linux-gnu
+            - name: Download binaries
+              uses: actions/download-artifact@v4
+              with:
+                name: Terminate binaries (Linux, Dynamic lib)
+                path: terminate-bin
+            - name: Move files into correct locations
+              run: |
+                mv terminate-bin/libterminate.so temp/usr/lib/x86_64-linux-gnu/libterminate.so.0.0.0
+                mv repo/debian_package/runtime-package-info.txt temp/DEBIAN/control
+                cd temp/usr/lib/x86_64-linux-gnu
+                ln -s libterminate.so.0.0.0 libterminate.so.0
+                cd ../../../../
+            - name: Build debian package
+              run:
+                dpkg-deb --build temp libterminate-runtime.deb
+            - name: Upload debian package as artifact
+              uses: actions/upload-artifact@v4
+              with:
+                path: libterminate-runtime.deb
+                name: Terminate Debian package (Debian only, Dynamic lib)
+            - name: Output folder structure
+              run: |
+                tree .
+                
