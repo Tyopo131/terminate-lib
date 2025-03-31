@@ -1,0 +1,8 @@
+Package: libterminate
+Version: 0.0.0~unreleased
+Section: devel
+Priority: optional
+Architecture: amd64
+Maintainer: T-yopo <samecob62@gmail.com>
+Description: A modern alternative to ncurses.
+Homepage: https://github.com/Tyopo131/terminate-lib

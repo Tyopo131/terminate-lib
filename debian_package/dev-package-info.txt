@@ -1,0 +1,9 @@
+Package: libterminate-dev
+Version: 0.0.0~unreleased
+Section: devel
+Priority: optional
+Architecture: amd64
+Maintainer: T-yopo <samecob62@gmail.com>
+Description: libterminate headers and static library
+Homepage: https://github.com/Tyopo131/terminate-lib
+Depends: libterminate (= 0.0.0~unreleased)
