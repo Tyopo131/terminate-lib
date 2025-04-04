@@ -1,6 +1,6 @@
 #pragma once
 #include <optional>
-#include <terminate/terminalpos.h>
+#include "terminalpos.h"
 
 namespace terminatelib {
 	[[deprecated(R"#("move_cursor(std::optional<int> line, std::optional<int> col)" is deprecated. Please use "move_cursor(Pos pos)" instead.)#")]]

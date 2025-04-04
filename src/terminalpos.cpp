@@ -1,5 +1,5 @@
 #pragma once
-#include <terminate/terminalpos.h>
+#include "terminalpos.h"
 
 terminatelib::Pos::Pos(std::optional<int> line, std::optional<int> col) : line(line), col(col) {
 

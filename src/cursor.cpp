@@ -1,7 +1,7 @@
-#include <cursor.h>
+#include "cursor.h"
 #include <iostream>
 #include <optional>
-#include <terminalpos.h>
+#include "terminalpos.h"
 
 
 void terminatelib::move_cursor(std::optional<int> line, std::optional<int> col)
