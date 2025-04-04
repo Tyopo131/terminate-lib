@@ -12,7 +12,7 @@ int main() {
 	constexpr std::chrono::milliseconds sleepTimePerProgressBarTick(100ms);
 
 	std::wcout.imbue(std::locale("")); // Set locale
-
+	terminatelib::clear_screen();
 	// Simulate output
 	std::cout << "Line 1\n";
 	std::cout << "Line 2...\n";
@@ -45,5 +45,5 @@ int main() {
 	}
 	terminatelib::clear_lines();
 	terminatelib::move_cursor({1,1});
-	std::cout << "Done!";
+	std::cout << "Done!\n";
 }
