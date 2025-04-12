@@ -24,7 +24,7 @@ int main() {
 	std::this_thread::sleep_for(7s);
 
 	terminatelib::clear_lines(1, 2, 3, 4); // Erase the output
-	terminatelib::move_cursor(1, 1); // Move cursor to line 1 column 0
+    terminatelib::move_cursor({1, 1}); // Move cursor to line 1 column 0
 	std::cout.flush();
 	std::cout << "Lines cleared.\n";
 	std::cout << "Please wait 2 seconds for the next demo!";
