@@ -1,3 +1,6 @@
+// Copyright (C) 2025 Tyopo131
+// SPDX-License-Identifier: LGPL-3.0-only
+
 #include "cursor.h"
 #include <iostream>
 #include <optional>

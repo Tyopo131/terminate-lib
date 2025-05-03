@@ -1,4 +1,3 @@
-<<<<<<< Updated upstream
 ALL_BUILD.vcxproj
 ALL_BUILD.vcxproj.filters
 CMakeCache.txt
@@ -11,5 +10,7 @@ terminate.sln
 CMakeFiles
 .vs
 out
-/build
+build
 *.kdev*
+.config
+CMakeLists.txt.user

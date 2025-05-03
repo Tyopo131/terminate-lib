@@ -1,3 +1,6 @@
+# Copyright (C) 2025 Tyopo131
+# SPDX-License-Identifier: LGPL-3.0-only
+
 cmake_minimum_required(VERSION 3.31.6)
 option(COMPILE_AS_SHARED_LIBRARY "Compile as a shared library (.dll, .so, .dylib) if on, compile as a static library (.lib, .a) if off (default OFF)" OFF)
 
