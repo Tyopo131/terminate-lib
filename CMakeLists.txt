@@ -22,8 +22,15 @@ set(SRC
 
 if (COMPILE_AS_SHARED_LIBRARY) 
     add_library(terminate SHARED ${SRC})
-    set_target_properties(terminate PROPERTIES WINDOWS_EXPORT_ALL_SYMBOLS ON)
     message(STATUS "Will compile as a shared library. (.dll, .so, .dylib)")
+    set_target_properties(terminate PROPERTIES
+        VERSION 0.0.0
+        SOVERSION 0
+        LIBRARY_OUTPUT_NAME terminate
+        SUFFIX .so
+        WINDOWS_EXPORT_ALL_SYMBOLS ON
+
+    )
 
     
 else() 
